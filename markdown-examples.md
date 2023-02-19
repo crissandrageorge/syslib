@@ -42,5 +42,5 @@ An ordered list:
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-| data     | data     | data|
-|data 2.    | data 2. |. data3 |
+| data     | data     | data.    |
+| data 2   |  data 2  |  data3   |
