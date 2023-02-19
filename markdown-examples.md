@@ -35,5 +35,12 @@ An ordered list:
 	-this is the sub item
 	-this is the sub item
 1. this is the second item
+	-this is a sub item
 1. this is the third item
+	-this is a sub item
+	-this is a sub item
 
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| data     | data     | data|
+|data 2.    | data 2. |. data3 |
