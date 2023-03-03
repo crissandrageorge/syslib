@@ -133,7 +133,8 @@ echo "<p>Return to search page: <a href='http://11.111.222.222/opacbb.php'>http:
 ### Connect to the MySQL Server
 ```
 mysql -u opacuser -p
-
+show databases;
+use opacdb;
 
 ### Run the INSERT command
 ```
@@ -143,6 +144,18 @@ insert into books
 ('Emma Donoghue', 'Room', 'Little, Brown \& Company', '2010-08-06'),
 ('Zadie Smith', 'White Teeth', 'Hamish Hamilton', '2000-01-27');
 
+### Added titles that are of interest to me
+```
+insert into books
+(author, title, publisher, copyright) values
+('Matthew Ferrence', 'Appalachia North', 'West Virginia University Press', '2019-01-26'),
+('Allison Burkette', 'Language and Material Culture', 'John Benjamins Publishing Company', '2015-09-24');
+
+insert into books
+(author, title, publisher, copyright) values
+('Brian O Neill', 'The Paris of Appalachia Pittsburgh in the Twenty-First Century', 'Carnegie Mellon University Press', '2009-09-04'),
+('Jerry Wemple', 'You Can See It From Here', 'Broadside Lotus Press', '2000-01-15'),
+('David W. Maurer', 'Kentucky Moonshine', 'University Press of Kentucky', '2021-10-12');
 
 ## Reflection:
 1. Much larger OPAC would not use these methods because creating a search form for thousands and millions of results would not be useful.
@@ -157,4 +170,5 @@ insert into books
 -Tested out MySQL queries, stored results, then closed the connections
 -Now, we are going to use a different PHP code to create a search system that will allow us to retrieve results based on the MySQL Query, which is closely mimicking an OPAC
 -ultimately, we are creating a means to search this Books Table
+- connects the table to then the html functioning
 
