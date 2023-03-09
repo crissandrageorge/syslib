@@ -1,15 +1,17 @@
-#Creating Bare Bones OPAC pt.1
+# Creating Bare Bones OPAC pt.1
 
 ## Creating the HTML Page and a PHP Search Page
--HTML Page wil be called **opacbb.html**
--PHP script that is activated will be called **search.php** which will establish the connection to the OPAC Database that was previously created
--MySQL still used and SQL queries will be used/conducted
+- HTML Page wil be called **opacbb.html**
+- PHP script that is activated will be called **search.php** which will establish the connection to the OPAC Database that was previously created
+- MySQL still used and SQL queries will be used/conducted
 
 ```
 sudo nano opaccb.html
 sudo nano search.php
+```
 
->Do not forget to add 'sudo' or else you will not be able to make the files within the directories!
+> Do not forget to add 'sudo' or else you will not be able to make the files within the directories!
+
 ```
 <html>
 <head>
@@ -63,7 +65,7 @@ an intuition, of how an OPAC works, though.</p>
 
 </body>
 </html>
-
+```
 
 
 ## PHP Search Script
@@ -125,16 +127,19 @@ mysqli_close($conn);
 echo "<p>Return to search page: <a href='http://11.111.222.222/opacbb.php'>http://11.111.222.222/opacbb.php</a></p>";
 
 ?>
+```
 
-##### Be sure to change the above and throughout this document the IP Address to my own IP Address
 
-## Modifications
+# Be sure to change the above and throughout this document the IP Address to my own IP Address
+
+# Modifications
 
 ### Connect to the MySQL Server
 ```
 mysql -u opacuser -p
 show databases;
 use opacdb;
+```
 
 ### Run the INSERT command
 ```
@@ -143,32 +148,36 @@ insert into books
 (author, title, publisher, copyright) values
 ('Emma Donoghue', 'Room', 'Little, Brown \& Company', '2010-08-06'),
 ('Zadie Smith', 'White Teeth', 'Hamish Hamilton', '2000-01-27');
+```
 
 ### Added titles that are of interest to me
+
 ```
 insert into books
 (author, title, publisher, copyright) values
 ('Matthew Ferrence', 'Appalachia North', 'West Virginia University Press', '2019-01-26'),
 ('Allison Burkette', 'Language and Material Culture', 'John Benjamins Publishing Company', '2015-09-24');
-
+```
+```
 insert into books
 (author, title, publisher, copyright) values
 ('Brian O Neill', 'The Paris of Appalachia Pittsburgh in the Twenty-First Century', 'Carnegie Mellon University Press', '2009-09-04'),
 ('Jerry Wemple', 'You Can See It From Here', 'Broadside Lotus Press', '2000-01-15'),
 ('David W. Maurer', 'Kentucky Moonshine', 'University Press of Kentucky', '2021-10-12');
+```
 
 ## Reflection:
 1. Much larger OPAC would not use these methods because creating a search form for thousands and millions of results would not be useful.
 1. Additionally Discovery System like InfoKAT would not use this because it is much more advanced and complex (but similar in theory). 
 1. ILS rely on modules that rely on relational databases with complex and interconnected tables *think of LIS 668 DB Management* This only relies on one table, but this is much larger in actual working libraries
 1.Gave a better visual into how this would apply on a much larger scale
-1. 
+ 
 
-##Fundamental Ideas from this process
--Previously created a HTML Page titled 'A Basic OPAC'
--Established a connection and opened the database after loading our MySQL credentials
--Tested out MySQL queries, stored results, then closed the connections
--Now, we are going to use a different PHP code to create a search system that will allow us to retrieve results based on the MySQL Query, which is closely mimicking an OPAC
--ultimately, we are creating a means to search this Books Table
-- connects the table to then the html functioning
+## Fundamental Ideas from this process
+- Previously created a HTML Page titled 'A Basic OPAC'
+- Established a connection and opened the database after loading our MySQL credentials
+- Tested out MySQL queries, stored results, then closed the connections
+- Now, we are going to use a different PHP code to create a search system that will allow us to retrieve results based on the MySQL Query, which is closely mimicking an OPAC
+- Ultimately, we are creating a means to search this Books Table
+- Connects the table to then the html functioning
 
