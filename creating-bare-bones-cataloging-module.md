@@ -146,6 +146,10 @@ systemctl status apache2
 > In a production level environment, we would add quite a bit more. Our MySQL database would contain many more tables that allow storing data related to the modules listed above. We would also like to make our modules graphically attractive and provide more content. That would mean we would add Cascading Style Sheets (CSS) and JavaScript to create an attractive and usable interface. But that would be a whole other class.
 
  # Reflection
-1.	
+1. Security is important to make sure that no one breeches the system and add records. 
+1. Additionally, we saw in grep how many times people try to access this machine, so this is another reason why this is important. 
+1. Having the html and php scripts connected and readable to MySQL is extremely important. 
+1. This was much easier than I assumed it would be and definitely helped my confidence. 
+1. This was another lesson on making sure that you input your own IP address instead of the one in the code.	
 
 
