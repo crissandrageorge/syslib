@@ -11,7 +11,7 @@ Koha's modules include:
 -	Acquisitions
 -	Reports
 -	OPAC
-
+- much more
 > According to Library Technology Guides, Koha is installed in "4,040 libraries [around the world], spanning 5,677 facilities or branches". Most installations are in medium sized or small libraries. Koha is well represented in academic libraries, but the majority of installations are in public libraries.
 > Although Koha is an open source ILS and free to download, install, and administer without external support, librarians can hire companies that support open source library management solutions, like ByWater Solutions or the Equinox Open Library Initiative These companies support ILS migration, hosting, training, and more. They also provide support for other library software services, such as open source discovery systems and electronic resource management systems.
 > In addition to Koha, Evergreen is also an open source integrated library system. According to Library Technology Guides, Evergreen is primarily installed at small and medium size public libraries, and most installations are in the U.S. and Canada.
