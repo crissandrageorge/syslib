@@ -123,10 +123,10 @@ http://IP-ADDRESS:8080
 - Delete patron circulation history
 
 # Reflection
-1.	
-1.
-1.
-1.
+1. It was really exciting to see all of these elements come together, especially in such a realistic view within the field	
+1. There a lot of add ons within a library website. the first page being word press or drupal and then catalog being different. This further shows the many parts that come together for a library website.
+1. Many of the steps were similar, showing consistency, but diffences in specific key areas
+1. The web interface of Koha was much different than the others we have used before, which was cool to see. 
 
 
 
