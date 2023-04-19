@@ -1,0 +1,80 @@
+# Using Gcloud for Virtual Machines
+
+## Overview and Information
+
+> A virtual machine (VM) instance is a virtualized operating system that runs on a host operating system.
+> In short, when we use virtual machines, it means instead of installing an operating system (like Linux, macOS, Windows, etc) on a physical machine, we use virtual machine software to mimic the process. The virtual machine, thus, runs on top of our main OS. It's like an app, where the app is a fully functioning operating system.
+> Virtual Box used to be in the Linux Systems Administration course and worked despite anyone was running Windows, macOS, or Linux. VirtualBox is available virtualization software.
+> Apple had problems with their arm-based chip and this created problems, so gcloud was used to solve this issue. 
+
+
+### Google Account
+- We need to have a personal Google account to get started with gcloud. I imagine most of you already have a Google account, but if not, go ahead and create one at https://www.google.com.
+- Next, the gcloud software helps you us on a Google Cloud project on your own system. Once you've created that project, you can enable billing for that project, and then install the gcloud software on your local machine.
+
+- Follow Step 1 at the top of the Install the gcloud CLI page to create a new project. Also, review the page on creating and managing projects.
+
+- When you create your project, you can name it anything, but try to name it something to do with this course. E.g., I am using the name syslib-2023. Avoid using spaces when naming your project.
+
+- Then click on the Create button, and leave the organization field set to No Organization.
+
+- The second thing to do is to set up a billing account for your gcloud project. This does mean there is a cost associated with this product, but the good news is that our bills by the end of the semester should only amount to $5 to 10 dollars, at most. Follow Step 2 to enable billing for your new project. See also the page on how to create, modify, or close your self-serve Cloud Billing account
+- After you have set up billing, the next step is to install gcloud on your local machines. The Install the gcloud CLI page provides instructions for different operating systems.
+- Follow these instructions closely for the operating system that you're using. Note that for macOS, you have to choose among three different CPU/chip architectures. If you have an older macOS machine (before November 2020 or so), it's likely that you'll select macOS 64-bit (x86_64). If you have a newer macOS machine, then it's likely you'll have to select macOS 64-bit (arm64, Apple M1 silicon). 
+> To find yoru processor information: Click on Apple Menu, choose about this mac, and locate the processor or chip information 
+
+- Downloaded to Default Folder (Mac- Downloads folder)
+```
+cd ~/Downloads/
+mv google-cloud-cli-392.0.0-darwin-x86_64.tar.gz ~/
+cd ~/
+tar -xzf google-cloud-cli-392.0.0-darwin-x86_64.tar.gz
+cd google-cloud-sdk
+```
+
+### Initalize the gcloud CLI
+- follow instructions for the Operating System
+```
+gcloud init
+```
+
+### VM Instance
+
+> log into the Google Cloud Counsole (should be the dashboard page)
+- Create the VM
+1. click on hamburger menu
+1. Click Compute Engine and then VM Instances
+1. Make sure project is listed
+1. Create Instance
+1. Provide a name (syslib)
+1. Under Series, have E2 selected
+1. Under Machine Type, have e2-micro selected (for lowest cost)
+1. Under Boot Disk, click Change and select Ubuntu and Ubuntu 20.04 LTS x86/64
+1. leave boot disk type and balanced persistent disk
+1. disk size should be 10GB
+1. Allow HTTP traffic
+1. click create
+> When we created the KOHA VM, we had to create one with more CPU and memory, which costed more because it had to be more powerful
+
+### Connect to the VM
+
+```
+gcloud compute ssh --zone "zone-info" "name-info" --project "project-id"
+sudo apt update
+sudo apt -y upgrade
+exit
+```
+
+### Create Snapshot
+
+1. Snapshots
+1. Create snapshots
+1. name: ubuntu-1
+1. provide description "this is a new install of ubuntu 20.04
+1. Choose your source disk
+1. Choose location, choose regional (to avoid extra costs)
+1. click on create
+
+# Congrats, it is installed!
+
+
